@@ -34,11 +34,10 @@ function createData(type, mimetype) {
 }
 
 function createRandomWord() {
-    var text = "";
     var req = new XMLHttpRequest();
     req.open('GET', document.location, false);
     req.send(null);
-    var text = req.getResponseHeader("capcha");
+    var text = req.getResponseHeader("x-capcha");
     return text;
 }
 
